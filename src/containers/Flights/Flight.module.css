@@ -1,0 +1,188 @@
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400");
+html,
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+.flightcard {
+  width: 700px;
+  height: 200px;
+  margin: 40px auto;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.flightcard .flightcardheader {
+  height: 250px;
+  width: 100%;
+  background: linear-gradient(to bottom, #264b76 0%, #002c5f 100%);
+  padding: 30px 50px;
+  border-bottom: 7px solid #6dbe47;
+  position: relative;
+}
+.flightcard .flightcardheader .flightlogo {
+  height: 110px;
+  width: 100%;
+}
+.flightcard .flightcardheader .flightlogo img {
+  width: 150px;
+}
+.flightcard .flightcard-header .flightdata {
+  height: auto;
+  border-top: 2px solid #3e5177;
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  text-align: left;
+}
+.flightcard .flightcardheader .flightdata span {
+  display: block;
+}
+.flightcard .flightcardheader .flightdata .title {
+  color: #838ea8;
+  font-size: 16px;
+}
+.flightcard .flightcardheader .flightdata .detail {
+  font-size: 18px;
+  padding-top: 3px;
+  color: white;
+}
+.flightcard .flightcardcontent {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  
+}
+.flightcard .flightcardcontent .flightrow {
+  width: 100%;
+  
+  padding: 30px 20px  30px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.flightcard .flightcardcontent .flightrow .plane {
+  text-align: center;
+  position: relative;
+}
+.flightcard .flightcardcontent .flightrow .plane img {
+  width: 40px;
+}
+.flightcard .flightcardcontent .flightrow .plane:before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: #efefef;
+  position: absolute;
+  top: 20px;
+  left: -55px;
+}
+.flightcard .flightcardcontent .flightrow .plane:after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #efefef;
+  position: absolute;
+  top: 20px;
+  right: -55px;
+}
+.flightcard .flightcardcontent .flightfrom {
+  text-align: center;
+  float: justify;
+}
+.flightcard .flightcardcontent .flightto {
+  text-align: center;
+  float: center;
+}
+.flightcard .flightcardcontent .flightfrom span,
+.flightcard .flightcardcontent .flightto span {
+  display: block;
+  text-align: center ;
+}
+.flightcard .flightcardcontent .flightfrom .fromcode,
+.flightcard .flightcardcontent .flightfrom .tocode,
+.flightcard .flightcardcontent .flightto .fromcode,
+.flightcard .flightcardcontent .flightto .tocode {
+  font-size: 30px;
+  color: #002c5f;
+  font-weight: 200;
+}
+.flightcard .flightcardcontent .flightfrom .fromcity,
+.flightcard .flightcardcontent .flightfrom .tocity,
+.flightcard .flightcardcontent .flightto .fromcity,
+.flightcard .flightcardcontent .flightto .tocity {
+  padding: 2px;
+  font-size: 12px;
+  color: #2b005f;
+  font-weight: 400;
+}
+.flightcard .flightcardcontent .flightdetailsrow {
+  width: 100%;
+  display: grid;
+  padding: 10px 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.flightcard .flightcardcontent .flightdetailsrow span {
+  display: block;
+}
+.flightcard .flightcardcontent .flightdetailsrow .title {
+  color: #6a8597;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.flightcard .flightcardcontent .flightdetailsrow .detail {
+  margin-top: 0.2em;
+  color: #002c5f;
+  font-size: 18px;
+}
+.flightcard .flightcardcontent .flightdetailsrow .flightoperator {
+  text-align: left;
+  float: left;
+}
+.flightcard .flightcardcontent .flightdetailsrow .flightclass {
+  float: center;
+  text-align: center;
+}
+.flightcard .flightcardcontent .flightdetailsrow .flightnumber {
+  padding-left: 80px;
+  float: center;
+  text-align: center;
+}
+.btn {
+	background-color:rgb(0, 238, 255) ;
+	border: none;
+  padding: 3px;
+	border-radius: 7px;
+	cursor: pointer;
+	color: black;
+	font: 100;
+  
+}
+.btnn{
+cursor: pointer;
+outline: 0;
+color: #fff;
+background-color: #0d6efd;
+border-color: #0d6efd;
+display: inline-block;
+font-weight: 400;
+line-height: 1.5;
+text-align: center;
+border: 1px solid transparent;
+padding: 6px 12px;
+font-size: 16px;
+border-radius: .25rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+.btnn:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+

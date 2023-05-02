@@ -1,0 +1,96 @@
+body {
+    padding: 0 !important;
+    margin: 0 !important; 
+}
+
+.container {
+    width: calc(100% - 500px);
+   
+    margin-left: 0;
+}
+
+.form {
+    margin: 20px 0;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.button {
+    background-color: #009879;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+
+.button1 {
+    background-color: #009879;
+    display: block;
+    margin: auto;
+    width: fit-content;
+
+}
+.confirmButton {
+    background-color: #009879;
+    margin-left: 250px;
+
+}
+
+.headerFlights {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color:  #009879;;
+    
+}
+
+.addflight-form{
+    background-color: white;
+    border-color: #009879;
+    margin-left: 500px;
+}
+
+.labels{
+    font-family: sans-serif;
+    font-weight: bold;
+    color:  #009879;
+    margin-bottom: 1px;
+
+}
+
+.container1{
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    margin-right: 3px;
+
+}
+

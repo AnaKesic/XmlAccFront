@@ -1,0 +1,22 @@
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #009879;
+    
+
+}
+
+#header a{
+    display:  inline-block;
+    margin: 0 9px;
+    text-decoration:solid;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+
+
