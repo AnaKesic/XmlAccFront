@@ -12,6 +12,8 @@ import Login from './containers/Auth/Login/Login';
 import Logout from './containers/Auth/Logout/Logout';
 import Tickets from './containers/Tickets/Tickets'
 import * as actions from './store/actions/index';
+import Accomodation from './containers/Accomodation/Accomodation';
+import FreeReservationsList from './containers/FreeReservations/free-reservations.component';
 
 class App extends Component {
   componentDidMount () {
@@ -21,9 +23,11 @@ class App extends Component {
   render () {
     let routes = (
       <Switch>
+        <Route path="/free-reservations" component={FreeReservationsList}/>
         <Route path="/auth" component={Auth} />
         <Route path="/login" component={Login} />
          <Route path="/flights" component= {Flights} /> 
+         <Route path="/accomodation/create" component= {Accomodation} /> 
          <Route path="/"/>
         {/* <Route path="/flights" component={} */}
         {/* <Route path="/" exact component={BurgerBuilder} /> */}
@@ -34,6 +38,7 @@ class App extends Component {
    if ( this.props.isAuthenticated ) {
       routes = (
         <Switch>
+          <Route path="/accomodation/create" component={Accomodation}/>
           <Route path="/flights" component={Tickets}/>
           <Route path="/logout" exact component={Logout}/>
           <Route path="/" />
