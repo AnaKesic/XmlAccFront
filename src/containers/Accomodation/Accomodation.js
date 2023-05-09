@@ -95,7 +95,7 @@ export default Accomodation => {
         }
     });
 
-    const [fileState, setFileState] = useState(null);
+    const [fileState, setFileState] = useState([]);
 
     const submitHandler = () => {
         if (!accomodationDto.name || !accomodationDto.price) {
@@ -126,6 +126,7 @@ export default Accomodation => {
     }
 
     const handleFileChange = (event) => {
+       
         const file = event.target.files[0];
         setFileState(file);
     };
@@ -133,8 +134,22 @@ export default Accomodation => {
 
     return (
         <div>
+
+            {
+                Array.from(fileState).map(item => {
+                return (
+                    <span>
+                    <img
+                        style={{ padding: '10px' }}
+                        width={150} height={100}
+                        src={item ? URL.createObjectURL(item) : null} />
+                    </span>
+                )
+                })
+            }
             <form onSubmit={this.submitHandler}>
                 <div >
+                    <input type='file' multiple  name='file' onChange={(event) => setFileState(event.target.files)}/> Image
                     <input type="text" name="name" onChange={( event ) => inputChangeHandler( event, 'type')}/> Name
                     <input type="number" name="price" onChange={( event ) => inputChangeHandler( event, 'type')}/> Price
                     <input type="number" name="minCapacity" onChange={( event ) => inputChangeHandler( event, 'type')}/> MinCapacity

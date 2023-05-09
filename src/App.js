@@ -14,6 +14,7 @@ import Tickets from './containers/Tickets/Tickets'
 import * as actions from './store/actions/index';
 import Accomodation from './containers/Accomodation/Accomodation';
 import FreeReservationsList from './containers/FreeReservations/free-reservations.component';
+import GetAll from './containers/Accomodation/GetAll';
 
 class App extends Component {
   componentDidMount () {
@@ -28,6 +29,7 @@ class App extends Component {
         <Route path="/login" component={Login} />
          <Route path="/flights" component= {Flights} /> 
          <Route path="/accomodation/create" component= {Accomodation} /> 
+         <Route path="/accomodation/all" component= {GetAll} /> 
          <Route path="/"/>
         {/* <Route path="/flights" component={} */}
         {/* <Route path="/" exact component={BurgerBuilder} /> */}

@@ -9,14 +9,24 @@ const navigationItems = ( props ) => (
        
         
       
-        {(!props.isAuthenticated) ?
+        {(!props.isAuthenticated ) ?
              <NavigationItem link="/auth">Sign in</NavigationItem>
-            : null }
+            : <NavigationItem link="/settings">My profile</NavigationItem>}
 
+        
+       { (!props.isHost && props.isAuthenticated)?
+             <NavigationItem link="/myreservations"> My reservations</NavigationItem>
+             :null}
+
+       { (props.isHost && props.isAuthenticated)?
+             <NavigationItem link="/myreservations"> My accommodations</NavigationItem>
+             :null}       
+       
+      
+    
        { (!props.isAuthenticated)?
              <NavigationItem link="/login"> Log in</NavigationItem>
              : (<NavigationItem link="/logout">Logout</NavigationItem>)}
-        
        
     </ul>
 );
