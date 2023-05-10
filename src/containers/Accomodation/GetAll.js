@@ -39,8 +39,7 @@ class GetAll extends Component {
 
     render() {
      const { flights} = this.state;
-     let arraymin=[];
-     let arrraymax=[];
+   
      
                     
                           return(    
@@ -64,6 +63,8 @@ class GetAll extends Component {
                                
                         
                           } ) );
+                          let arraymin=[];
+                          let arraymax=[];
                            for (let i = 0; i < minCapacity; i++) {
                             arraymin.push("ana");
                           }
@@ -72,9 +73,9 @@ class GetAll extends Component {
                           ));
 
                           for (let i = 0; i < maxCapacity; i++) {
-                            arraymin.push("ana");
+                            arraymax.push("ana");
                           }
-                          let max = arraymin.map(image=>(
+                          let max = arraymax.map(image=>(
                              <span><Icon name="user" size="small"/></span>
                           ));
 
@@ -85,7 +86,7 @@ class GetAll extends Component {
                                     <div className={classes.media}>
                                     <SimpleImageSlider
                                      width={500}
-                                     height={200}
+                                     height={300}
                                     images={slider}
                                     showNavs={true}
                                     /> 
