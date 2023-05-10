@@ -130,6 +130,8 @@ export default Accomodation => {
         const file = event.target.files[0];
         setFileState(file);
     };
+  
+
 
 
     return (
@@ -151,6 +153,10 @@ export default Accomodation => {
                 <div >
                     <input type='file' multiple  name='file' onChange={(event) => setFileState(event.target.files)}/> Image
                     <input type="text" name="name" onChange={( event ) => inputChangeHandler( event, 'type')}/> Name
+                    <input type="text"name="location.street" onChange={( event ) => inputChangeHandler( event, 'type')}/> street
+                    <input type="text"name="location.number" onChange={( event ) => inputChangeHandler( event, 'type')}/> Number
+                    <input type="text"name="location.city" onChange={( event ) => inputChangeHandler( event, 'type')}/> City
+                    <input type="text"name="location.state" onChange={( event ) => inputChangeHandler( event, 'type')}/> State
                     <input type="number" name="price" onChange={( event ) => inputChangeHandler( event, 'type')}/> Price
                     <input type="number" name="minCapacity" onChange={( event ) => inputChangeHandler( event, 'type')}/> MinCapacity
                     <input type="number" name="maxCapacity" onChange={( event ) => inputChangeHandler( event, 'type')}/> MaxCapacity
