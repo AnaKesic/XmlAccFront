@@ -11,7 +11,7 @@ const createAccomodation = (accomodationDto, files) => {
         formData.append(key, accomodationDto[key])
     }
     
-    return Axios.post("https://localhost:44331/api/Accommodation/add", formData, {contentType: 'multipart/form-data'});
+    return Axios.post("http://localhost:8081/api/Accommodation/add", formData, {contentType: 'multipart/form-data'});
 };
 
 export {createAccomodation}
