@@ -11,7 +11,7 @@ const navigationItems = ( props ) => (
       
         {(!props.isAuthenticated ) ?
              <NavigationItem link="/auth">Sign in</NavigationItem>
-            : <NavigationItem link="/settings">My profile</NavigationItem>}
+            : <NavigationItem link="/myprofile">My profile</NavigationItem>}
 
         
        { (!props.isHost && props.isAuthenticated)?

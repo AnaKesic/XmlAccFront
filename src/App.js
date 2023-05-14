@@ -15,6 +15,9 @@ import * as actions from './store/actions/index';
 import Accomodation from './containers/Accomodation/Accomodation';
 import FreeReservationsList from './containers/FreeReservations/free-reservations.component';
 import GetAll from './containers/Accomodation/GetAll';
+import MyProfile from './containers/Profile/MyProfile';
+import UpdateProfile from './containers/Profile/UpdateProfile';
+
 
 class App extends Component {
   componentDidMount () {
@@ -30,7 +33,8 @@ class App extends Component {
          <Route path="/flights" component= {Flights} /> 
          <Route path="/accomodation/create" component= {Accomodation} /> 
          <Route path="/accomodation/all" component= {GetAll} /> 
-         <Route path="/"/>
+         <Route path="/myprofile" component={MyProfile} />
+         <Route path="/update-profile" component= {UpdateProfile}/>
         {/* <Route path="/flights" component={} */}
         {/* <Route path="/" exact component={BurgerBuilder} /> */}
          <Redirect to="/" /> 
@@ -43,7 +47,8 @@ class App extends Component {
           <Route path="/accomodation/create" component={Accomodation}/>
           <Route path="/flights" component={Tickets}/>
           <Route path="/logout" exact component={Logout}/>
-          <Route path="/" />
+          <Route path="/myprofile" component={MyProfile} />
+          <Route path="/update-profile" component= {UpdateProfile}/>
            <Redirect to="/" /> 
         </Switch>
       );

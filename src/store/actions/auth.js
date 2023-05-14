@@ -8,12 +8,13 @@ export const authStart = () => {
     };
 };
 
-export const authSuccess = (token, userId,userType) => {
+export const authSuccess = (token, userId, userType, user) => {
     return {
         type: actionTypes.AUTH_SUCCESS,
         idToken: token,
         userId: userId,
-        userType:userType
+        userType: userType,
+        user : user,
     };
 };
 
@@ -63,11 +64,11 @@ export const auth = (email, password, isSignup) => {
                 localStorage.setItem('userId', authData.email);
                 localStorage.setItem('userType', response.data.userType)
                
-                dispatch(authSuccess(response.data.idToken, authData.email, response.data.userType));
+                dispatch(authSuccess(response.data.idToken, authData.email, response.data.userType, response.data));
                 dispatch(checkAuthTimeout(1800));
             })
             .catch(err => {
-                dispatch(authFail(err.response.data.error));
+                dispatch(authFail(err.response.data));
             });
     };
 };
