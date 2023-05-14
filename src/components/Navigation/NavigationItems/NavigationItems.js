@@ -18,9 +18,11 @@ const navigationItems = ( props ) => (
              <NavigationItem link="/myreservations"> My reservations</NavigationItem>
              :null}
 
-       { (props.isHost && props.isAuthenticated)?
-             <NavigationItem link="/myreservations"> My accommodations</NavigationItem>
-             :null}       
+             
+
+      { (props.isHost && props.isAuthenticated)?
+             <NavigationItem link="/accomodation/create"> Create new accommodation </NavigationItem>
+             :null}   
        
       
     

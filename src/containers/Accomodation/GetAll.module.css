@@ -172,3 +172,53 @@
     .title {
     line-height: 1.2;
     }
+
+      
+      /* Ostali stilovi... */
+      
+      .container {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      .searchContainer {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        margin-top: 70px;
+        margin: 0 auto;
+      }
+      
+      .flightsContainer {
+        flex: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 16px;
+        overflow-y: auto;
+        max-height: calc(100vh - 96px); /* Dodano ograničenje maksimalne visine za prikaz smještaja */
+        margin-bottom: 16px;
+        margin: 0 auto;
+      }
+      
+      .card {
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+        color: rgba(0,0,0,.87);
+        margin: 8px;
+        min-width: 290px;
+        overflow: hidden;
+        position: relative;
+        min-height: 400px;
+      }
+      
+      /* Dodatni stilovi za polje za pretragu */
+      .searchForm {
+        margin-bottom: 16px;
+      }
+      
+      /* Ostali stilovi... */
+      

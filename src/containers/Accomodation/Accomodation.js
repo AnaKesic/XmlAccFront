@@ -32,7 +32,8 @@ export default Accomodation => {
         }
 
         createAccomodation(accomodationDto, fileState).then(data => {
-            console.log('Success')
+            console.log('Success');
+            window.location.href = '/accommodation/all';
         }).catch(err => {
             console.log(err);
         })
@@ -79,15 +80,15 @@ export default Accomodation => {
             }
             <form onSubmit={this.submitHandler}>
                 <div >
-                    <input type='file' multiple  name='file' onChange={(event) => setFileState(event.target.files)}/> Image
-                    <input type="text" name="name" onChange={( event ) => inputChangeHandler( event, 'type')}/> Name
-                    <input type="text"name="location.street" onChange={( event ) => inputChangeHandler( event, 'type')}/> street
-                    <input type="text"name="location.number" onChange={( event ) => inputChangeHandler( event, 'type')}/> Number
-                    <input type="text"name="location.city" onChange={( event ) => inputChangeHandler( event, 'type')}/> City
-                    <input type="text"name="location.state" onChange={( event ) => inputChangeHandler( event, 'type')}/> State
-                    <input type="number" name="price" onChange={( event ) => inputChangeHandler( event, 'type')}/> Price
-                    <input type="number" name="minCapacity" onChange={( event ) => inputChangeHandler( event, 'type')}/> MinCapacity
-                    <input type="number" name="maxCapacity" onChange={( event ) => inputChangeHandler( event, 'type')}/> MaxCapacity
+                    Image<input type='file' multiple  name='file' onChange={(event) => setFileState(event.target.files)}/> 
+                    Name<input type="text" name="name" onChange={( event ) => inputChangeHandler( event, 'type')}/> 
+                    Street<input type="text"name="location.street" onChange={( event ) => inputChangeHandler( event, 'type')}/>
+                    Number<input type="text"name="location.number" onChange={( event ) => inputChangeHandler( event, 'type')}/> 
+                    City<input type="text"name="location.city" onChange={( event ) => inputChangeHandler( event, 'type')}/> 
+                    State<input type="text"name="location.state" onChange={( event ) => inputChangeHandler( event, 'type')}/> 
+                    Price<input type="number" name="price" onChange={( event ) => inputChangeHandler( event, 'type')}/> 
+                    MinCapacity<input type="number" name="minCapacity" onChange={( event ) => inputChangeHandler( event, 'type')}/> 
+                    MaxCapacity<input type="number" name="maxCapacity" onChange={( event ) => inputChangeHandler( event, 'type')}/> 
                     <label>
                         <input type="checkbox" name="wifiIncluded" checked={accomodationDto.wifiIncluded} onChange={inputChangeHandler} /> WiFi included
                     </label>

@@ -106,6 +106,9 @@ class Login extends Component {
 
     render () {
         const formElementsArray = [];
+        if (this.props.isAuthenticated) {
+            return <Redirect to="/accomodation/all" />;
+          }
         for ( let key in this.state.controls ) {
             formElementsArray.push( {
                 id: key,

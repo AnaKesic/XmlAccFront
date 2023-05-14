@@ -29,15 +29,15 @@ class App extends Component {
       <Switch>
         <Route path="/free-reservations" component={FreeReservationsList}/>
         <Route path="/auth" component={Auth} />
-        <Route path="/login" component={Login} />
+         <Route path="/login" component={Login} />
          <Route path="/flights" component= {Flights} /> 
          <Route path="/accomodation/create" component= {Accomodation} /> 
-         <Route path="/accomodation/all" component= {GetAll} /> 
+         <Route path="/" component= {GetAll} /> 
          <Route path="/myprofile" component={MyProfile} />
          <Route path="/update-profile" component= {UpdateProfile}/>
         {/* <Route path="/flights" component={} */}
         {/* <Route path="/" exact component={BurgerBuilder} /> */}
-         <Redirect to="/" /> 
+        <Redirect to="/" /> 
       </Switch>
     );
 
@@ -48,8 +48,10 @@ class App extends Component {
           <Route path="/flights" component={Tickets}/>
           <Route path="/logout" exact component={Logout}/>
           <Route path="/myprofile" component={MyProfile} />
+          <Route path="/accomodation/all" component= {GetAll} /> 
           <Route path="/update-profile" component= {UpdateProfile}/>
-           <Redirect to="/" /> 
+          <Redirect to="/accomodation/all" />
+           
         </Switch>
       );
     } 
